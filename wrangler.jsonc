@@ -1,0 +1,8 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "cloudflare-todo-list",
+  "compatibility_date": "2026-02-07",
+  "assets": {
+    "not_found_handling": "single-page-application",
+  },
+}
