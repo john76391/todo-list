@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { cn } from "@/lib/utils";
 import { v4 as uuidv4 } from "uuid";
+import { ModeToggle } from "@/components/mode-toggle";
 // form
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -160,8 +161,12 @@ export default function Component() {
   }, [todos]);
 
   return (
-    <div className="min-h-screen px-4 py-8">
-      <Card className="mx-auto max-w-xl">
+    <div className="min-h-screen px-4 pb-8 pt-16">
+      <div className="absolute top-3 right-3">
+        <ModeToggle />
+      </div>
+
+      <Card className="mx-auto max-w-xl backdrop-blur-2xl">
         <CardHeader>
           <CardTitle className="text-center text-3xl font-bold">
             Todo List
